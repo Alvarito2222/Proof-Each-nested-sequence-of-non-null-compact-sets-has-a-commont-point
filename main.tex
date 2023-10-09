@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb} 
+\usepackage{parskip} 
+
+\usepackage{amsmath}
+
+\title{Proof : Each nested sequence of non-null compact sets has a common point.}
+\author{aleonp000 }
+\date{January 2023}
+
+\begin{document}
+
+
+\noindent
+\textbf{Theorem}:  Each nested sequence of non-null compact sets has a common point.
+
+\textit{Proof}:  Let ${M_n}$ be a nested sequence of non-empty compact sets, i.e., $M_1 \supseteq M_2 \supseteq M_3 \supseteq \cdots$. We want to show that  $\bigcap_{n=1}^{\infty} M_n \neq \emptyset$.
+
+Note: $M_1 $$= \bigcup_{n=1}^{\infty} M_n$. Then , Since $M_n$ is compact for all $n$, then it is also bounded according to Theorem 31. Therefore, $M_1$ is also bounded.
+ \begin{align*}
+\text{Let } x_1 &\in M_1, \\
+      x_2 &\in M_2, \\
+      x_3 &\in M_3, \\
+               &\;\;\vdots 
+               \\ x_n &\in M_n
+\end{align*}
+Now, consider the infinite collection $Z =$ \{$ x_1 , x_2 , x_3 ..$\} . If $Z$ is finite , $x$ would be a common point. Since $M_1$ is compact, there exists a limit point $x \in M_1 $ of the collection.
+
+Claim: $x$ in $M_n$ for each $n$
+ \begin{quote}
+Proof: Suppose not. Then there is some $\ell$ that $x \not\in M_{\ell}$. Since the $M_n$ 's are nested, this means that $x \not\in M_{w}$ for all $w \geq \ell$. Define $\epsilon$ = $min\left\{d(x,M_{\ell})/2, x_1, x_2, \ldots, m_{\ell}\right\}$ 
+
+Now, consider the neighborhood $N_\epsilon(x)$. By construction, $N_\epsilon(x) \cap M_{\ell} = \emptyset$. Thus, for all $1 \leq k \leq \ell - 1$, $x_k \notin N_\epsilon(x)$, because the distance between $x_k$ and $x$ is greater than or equal to $\epsilon$.
+
+Since $x$ is a limit point of the collection $Z$, there exists an $x_n \in Z$ such that $x_n \in N_\epsilon(x)$. By construction, $x_n \notin M_{\ell}$ , so  $x_n \not\in M_n$ However, we know that $x_n \in M_n$, and since $M_n \subseteq M_{\ell}$ for all $n \geq \ell$, we arrive at a contradiction. 
+\end{quote}
+Thus, $x \in M_n$ for each $n$, and so $\bigcap_{n=1}^{\infty} M_n \neq \emptyset$. This completes the proof.
+
+
+
+
+ \noindent 
+ $\therefore$  Each nested sequence of non-null compact sets has a common point.      \spaceskip1cm   \hfill                     $\square$
+ 
+
+\end{document}
